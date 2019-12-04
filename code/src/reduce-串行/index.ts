@@ -1,5 +1,5 @@
 // promise function 1
-function p1(a) {
+function p1(a: number) {
   return new Promise((resolve, reject) => {
     console.log('p1');
     resolve(a * 5);
@@ -7,7 +7,7 @@ function p1(a) {
 }
 
 // promise function 2
-function p2(a) {
+function p2(a: number) {
   return new Promise((resolve, reject) => {
     console.log('p2');
     setTimeout(_ => {
@@ -17,13 +17,13 @@ function p2(a) {
 }
 
 // function 3  - will be wrapped in a resolved promise by .then()
-function f3(a) {
+function f3(a: number) {
   console.log('f3');
   return a * 3;
 }
 
 // promise function 4
-function p4(a) {
+function p4(a: number) {
   return new Promise((resolve, reject) => {
     console.log('p4');
     resolve(a * 4);
